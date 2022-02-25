@@ -1,0 +1,9 @@
+.card {
+  background-color: white;
+  border-radius: 8px;
+}
+
+.card--centered {
+  text-align: center;
+}
+

@@ -1,0 +1,37 @@
+.button {
+  --background-color: var(--color-primary);
+  --border-color: var(--color-primary);
+  --color: var(--color-primary-text);
+
+  --button-background-color: var(--background-color);
+  --button-border-color: var(--border-color);
+  --button-color: var(--color);
+
+  background-color: var(--button-background-color);
+  border: 1px solid var(--button-border-color);
+  color: var(--button-color);
+  height: var(--input-size);
+  max-width: var(--input-max-width);
+
+  padding: 12px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1.2px;
+  text-align: center;
+  width: 100%;
+}
+
+.button--inverted {
+  --button-background-color: var(--color);
+  --button-color: var(--background-color);
+}
+
+
+.button--error {
+  --background-color: var(--color-error);
+  --border-color: var(--color-error);
+  --color: white;
+}
+

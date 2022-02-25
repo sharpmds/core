@@ -1,0 +1,30 @@
+{
+  "author": "mdos-san",
+  "name": "@sharpmds/core",
+  "version": "0.0.1",
+  "description": "React component/module/service library",
+  "main": "build/index.js",
+  "module": "build/index.js",
+  "types": "build/index.d.ts",
+  "homepage": "https://github.com/sharpmds/ui#readme",
+  "license": "ISC",
+  "scripts": {
+    "build": "npm run build:js && npm run build:css",
+    "build:css": "cp -r src/css src/index.css build",
+    "build:js": "tsc",
+    "prepack": "rm -rf build types && npm run build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharpmds/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/sharpmds/ui/issues"
+  },
+  "devDependencies": {
+    "react": "^17.0.2",
+    "@types/react": "^17.0.38",
+    "typescript": "^4.5.5"
+  }
+}

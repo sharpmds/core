@@ -1,0 +1,15 @@
+.radio {
+  margin: 0;
+  height: calc(var(--input-size) / 2);
+  width: calc(var(--input-size) / 2);
+}
+
+.radio-wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.radio-label {
+  margin-left: 8px;
+  line-height: calc(var(--input-size) / 2);
+}

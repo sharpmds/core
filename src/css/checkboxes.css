@@ -1,0 +1,16 @@
+.checkbox {
+  margin: 0;
+  height: calc(var(--input-size) / 2);
+  width: calc(var(--input-size) / 2);
+}
+
+.checkbox-wrapper {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+.checkbox-label {
+  margin-left: 8px;
+  line-height: calc(var(--input-size) / 2);
+}

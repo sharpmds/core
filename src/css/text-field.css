@@ -1,0 +1,22 @@
+.text-field {
+  --text-field-color: var(--color-text-light);
+
+  border: 1px solid var(--text-field-color);
+  color: var(--text-field-color);
+  height: var(--input-size);
+  line-height: var(--input-size);
+  max-width: var(--input-max-width);
+
+  background-color: white;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 20px;
+  outline: none;
+  padding: 8px 16px;
+  width: 100%;
+  display: inline-block;
+}
+
+.text-field:focus {
+  --text-field-color: var(--color-primary);
+}

@@ -1,0 +1,7 @@
+.link {
+  --link-color: var(--color-primary);
+
+  text-decoration: none;
+  color: var(--link-color);
+  cursor: pointer;
+}

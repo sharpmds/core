@@ -1,0 +1,39 @@
+@import "./css/alert.css";
+@import "./css/button.css";
+@import "./css/card.css";
+@import "./css/center.css";
+@import "./css/checkboxes.css";
+@import "./css/container.css";
+@import "./css/link.css";
+@import "./css/radio.css";
+@import "./css/sizer.css";
+@import "./css/splash.css";
+@import "./css/stack.css";
+@import "./css/text-field.css";
+@import "./css/text-light.css";
+@import "./css/text.css";
+
+:root {
+  --hue-primary: 36;
+  --hue-info: 200;
+  --hue-success: 110;
+  --hue-warning: 52;
+  --hue-error: 0;
+
+  --color-text: hsl(var(--hue-primary), 100%, 20%);
+  --color-text-light: #999;
+
+  --color-primary: hsl(var(--hue-primary), 100%, 50%);
+  --color-primary-text: #fff;
+
+  --background-primary-light: hsl(var(--hue-primary), 100%, 90%); 
+
+  --input-size: 42px;
+  --input-max-width: 400px;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
