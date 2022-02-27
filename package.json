@@ -5,6 +5,8 @@
   "description": "React component/module/service library",
   "homepage": "https://github.com/sharpmds/ui#readme",
   "license": "ISC",
+  "main": "build/cjs/index.js",
+  "module": "build/esm/index.js",
   "types": "build/esm/index.d.ts",
   "exports": {
     ".": {
