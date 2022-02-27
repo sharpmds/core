@@ -3,15 +3,19 @@
   "name": "@sharpmds/core",
   "version": "1.0.2",
   "description": "React component/module/service library",
-  "main": "build/index.js",
-  "module": "build/index.js",
-  "types": "build/index.d.ts",
   "homepage": "https://github.com/sharpmds/ui#readme",
   "license": "ISC",
+  "types": "build/esm/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./build/cjs/index.js",
+      "import": "./build/esm/index.js"
+    }
+  },
   "scripts": {
-    "build": "npm run build:js && npm run build:css",
-    "build:css": "cp -r src/css src/index.css build",
-    "build:js": "tsc",
+    "build": "npm run build:esm && npm run build:cjs",
+    "build:esm": "tsc -p ./tsconfig.esm.json",
+    "build:cjs": "tsc -p ./tsconfig.cjs.json",
     "prepack": "rm -rf build types && npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
