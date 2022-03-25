@@ -12,7 +12,8 @@
     ".": {
       "require": "./build/cjs/index.js",
       "import": "./build/esm/index.js"
-    }
+    },
+    "./index.css": "./index.css"
   },
   "scripts": {
     "build": "npm run build:esm && npm run build:cjs",
