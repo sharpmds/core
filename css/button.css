@@ -35,3 +35,8 @@
   --color: white;
 }
 
+.button--round {
+  width: var(--input-size);
+  max-width: var(--input-size);
+  border-radius: 100%;
+}
