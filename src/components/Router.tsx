@@ -12,6 +12,21 @@ const Router = ({ routes }: Props) => {
 
   useEffect(() => Services.router.watchCurrentRoute(setRoute), []);
 
+  useEffect(() => {
+    setInterval(() => {
+      const path = window.location.hash.slice(1);
+
+      if (path === "") {
+        Services.router.setPath("/");
+      }
+
+      if (path !== Services.router.getCurrentPath()) {
+        Services.router.setPath("path");
+      }
+    }, 333);
+  }, []);
+
+
   return <>{routes[route]}</>;
 };
 
