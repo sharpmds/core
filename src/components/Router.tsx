@@ -18,9 +18,7 @@ const Router = ({ routes }: Props) => {
 
       if (path === "") {
         Services.router.setPath("/");
-      }
-
-      if (path !== Services.router.getCurrentPath()) {
+      } else if (path !== Services.router.getCurrentPath()) {
         Services.router.setPath(path);
       }
     }, 333);

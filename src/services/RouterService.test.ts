@@ -1,6 +1,21 @@
 import RouterService from "./RouterService";
 
 describe("RouterService", () => {
+  test("can manage root path", () => {
+    // Arrange
+    const windowMock = { location: { hash: "" } } as any;
+    const service = RouterService(windowMock);
+
+    // Act
+    service.setRoutes(["/"]);
+    service.setPath("/");
+
+    // Assert
+    expect(service.getCurrentRoute()).toBe("/");
+    expect(service.getCurrentPath()).toBe("/");
+    expect(windowMock.location.hash).toBe("#/");
+  });
+
   test("can manage route with path variable", () => {
     // Arrange
     const windowMock = { location: { hash: "" } } as any;
