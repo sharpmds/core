@@ -6,11 +6,13 @@ interface Props {
 }
 
 const Router = ({ routes }: Props) => {
-  const [page, setPage] = useState("default");
+  const [route, setRoute] = useState("/");
 
-  useEffect(() => Services.router.watchPage(setPage), []);
+  useEffect(() => Services.router.setRoutes(Object.keys(routes)), []);
 
-  return <>{routes[page]}</>;
+  useEffect(() => Services.router.watchCurrentRoute(setRoute), []);
+
+  return <>{routes[route]}</>;
 };
 
 export default Router;

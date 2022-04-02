@@ -1,7 +1,7 @@
 import RouterService from "./RouterService";
 
 const Services = () => {
-  const services = { router: RouterService() };
+  const services = { router: RouterService(window) };
 
   return {
     ...services,
