@@ -63,10 +63,6 @@ const RouterService = (window: Window) => {
     routes.forEach((route) => {
       const pathIterator = route.matchAll(pathRegex);
       buildNode(routeMap, pathIterator);
-
-      if (window.location.hash !== "") {
-        setPath(window.location.hash.slice(1));
-      }
     });
   };
 

@@ -9,7 +9,7 @@ const Router = ({ routes }: Props) => {
   const [route, setRoute] = useState("/");
 
   useEffect(() => {
-    Services.router.setRoutes(Object.keys(routes));
+    Services.router.setRoutes(Object.keys(routes))
 
     setInterval(() => {
       const path = window.location.hash.slice(1);
