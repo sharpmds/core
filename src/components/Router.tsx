@@ -21,7 +21,7 @@ const Router = ({ routes }: Props) => {
       }
 
       if (path !== Services.router.getCurrentPath()) {
-        Services.router.setPath("path");
+        Services.router.setPath(path);
       }
     }, 333);
   }, []);
