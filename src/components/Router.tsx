@@ -8,11 +8,9 @@ interface Props {
 const Router = ({ routes }: Props) => {
   const [route, setRoute] = useState("/");
 
-  useEffect(() => Services.router.setRoutes(Object.keys(routes)), []);
-
-  useEffect(() => Services.router.watchCurrentRoute(setRoute), []);
-
   useEffect(() => {
+    Services.router.setRoutes(Object.keys(routes));
+
     setInterval(() => {
       const path = window.location.hash.slice(1);
 
@@ -24,6 +22,7 @@ const Router = ({ routes }: Props) => {
     }, 333);
   }, []);
 
+  useEffect(() => Services.router.watchCurrentRoute(setRoute), []);
 
   return <>{routes[route]}</>;
 };
