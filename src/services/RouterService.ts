@@ -46,7 +46,7 @@ const buildNode = (
 };
 
 const RouterService = (window: Window) => {
-  const pathRegex = /\/([\w{}]*)/g;
+  const pathRegex = /\/([\w{}-]*)/g;
   const [watchCurrentPath, setCurrentPath, getCurrentPath] = Watcher("/");
   const [watchCurrentRoute, setCurrentRoute, getCurrentRoute] = Watcher("/");
   const [watchParams, setParams, getParams] = Watcher<Record<string, string>>(
