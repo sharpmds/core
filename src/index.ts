@@ -9,6 +9,7 @@ export { Card } from "./components/Card";
 export { default as Text } from "./components/Text";
 export { default as TextLight } from "./components/TextLight";
 export { default as Link } from "./components/Link";
+export { default as Flex } from "./components/Flex";
 
 // Layout
 export { Container } from "./components/Container";
