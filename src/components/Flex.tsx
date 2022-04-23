@@ -8,24 +8,13 @@ interface FlexProps {
 
   gap?: number;
 
-  flexDirectionColumn?: boolean;
-  flexDirectionRow?: boolean;
-
-  justifyContentCenter?: boolean;
-  justifyContentFlexStart?: boolean;
-  justifyContentFlexEnd?: boolean;
-  justifyContentSpaceBetween?: boolean;
-  justifyContentSpaceAround?: boolean;
-  justifyContentSpaceEvenly?: boolean;
-
-  alignItemsStart?: boolean;
-  alignItemsCenter?: boolean;
-  alignItemsEnd?: boolean;
-
   width100?: boolean;
   height100?: boolean;
 
-  overflowAuto?: boolean;
+  flexDirection?: CSSProperties["flexDirection"];
+  justifyContent?: CSSProperties["justifyContent"];
+  alignItems?: CSSProperties["alignItems"];
+  overflow?: CSSProperties["overflow"];
 }
 
 const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
@@ -37,44 +26,16 @@ const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
 
       gap = 0,
 
-      flexDirectionColumn = false,
-      flexDirectionRow = false,
-
-      justifyContentCenter = false,
-      justifyContentFlexStart = false,
-      justifyContentFlexEnd = false,
-      justifyContentSpaceAround = false,
-      justifyContentSpaceEvenly = false,
-      justifyContentSpaceBetween = false,
-
-      alignItemsStart = false,
-      alignItemsCenter = false,
-      alignItemsEnd = false,
+      justifyContent = "initial",
+      alignItems = "initial",
+      overflow = "initial",
+      flexDirection = "initial",
 
       width100 = false,
       height100 = false,
-
-      overflowAuto = false,
     }: FlexProps,
     ref
   ) => {
-    let flexDirection: CSSProperties["flexDirection"] = "row";
-    if (flexDirectionRow) flexDirection = "row";
-    if (flexDirectionColumn) flexDirection = "column";
-
-    let justifyContent: CSSProperties["justifyContent"] = "center";
-    if (justifyContentCenter) justifyContent = "center";
-    if (justifyContentFlexStart) justifyContent = "flex-start";
-    if (justifyContentFlexEnd) justifyContent = "flex-end";
-    if (justifyContentSpaceAround) justifyContent = "space-around";
-    if (justifyContentSpaceEvenly) justifyContent = "space-evenly";
-    if (justifyContentSpaceBetween) justifyContent = "space-between";
-
-    let alignItems: CSSProperties["alignItems"] = "center";
-    if (alignItemsStart) alignItems = "start";
-    if (alignItemsCenter) alignItems = "start";
-    if (alignItemsEnd) alignItems = "end";
-
     return (
       <div
         ref={ref}
@@ -92,7 +53,7 @@ const Flex = React.forwardRef<HTMLDivElement, FlexProps>(
           height: height100 ? "100%" : "auto",
           maxHeight: height100 ? "100%" : "auto",
 
-          overflow: overflowAuto ? "auto" : "initial",
+          overflow,
         }}
       >
         {children}
